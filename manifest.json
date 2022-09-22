@@ -1,12 +1,16 @@
 {
     "name": "Tim and Joe's Extension Adventure",
     "description": "Build an Extension!",
-    "version": "1.0",
+    "version": "2",
     "manifest_version": 3,
+    "web_accessible_resources" : [{
+      "resources": [ "images/*", "http://clipart-library.com/images/piqd4jMyT.gif"],
+       "matches": ["http://*/*", "https://*/*"]
+      }],
     "background": {
       "service_worker": "background.js"
     },
-    "permissions": ["storage"],
+    "permissions": ["storage", "tabs", "activeTab", "scripting", "extension"],
     "action": {
       "default_popup": "popup.html",
       "default_icon": {
